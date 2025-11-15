@@ -35,87 +35,27 @@ The program relies on Linux-specific system interfaces:
 - `sys/sysinfo.h` for memory statistics (not available on macOS/Windows)
 - `utmp.h` for user session information
 
-## 🚀 How to Run on Linux
+## 🚀 How to Run
 
-### Option 1: Direct Linux Access (Recommended)
-
-If you have access to a Linux machine:
+### On Linux (Direct)
 
 ```bash
-# Clone or download this repository
-cd /path/to/A3
-
-# Compile the program
 make
-
-# Run with default settings (10 samples, 1 second delay)
 ./sys_stats
-
-# Run with custom parameters
 ./sys_stats --samples=5 --tdelay=2 --graphics
-
-# Run with positional arguments
-./sys_stats 5 2
 ```
 
-### Option 2: Docker Container
-
-Run the program in a Linux container:
+### Using Docker (Any Platform)
 
 ```bash
-# Build Docker image
 docker build -t sys-stats .
-
-# Run the container
 docker run --rm -it sys-stats
-
-# Or run with custom arguments
 docker run --rm -it sys-stats ./sys_stats --graphics --samples=5
 ```
 
-**Dockerfile:**
-```dockerfile
-FROM ubuntu:22.04
-
-# Install build tools
-RUN apt-get update && apt-get install -y gcc make
-
-# Copy source code
-WORKDIR /app
-COPY . .
-
-# Build the program
-RUN make
-
-# Run by default
-CMD ["./sys_stats"]
-```
-
-### Option 3: SSH to Linux Lab Machine
-
-If you're affiliated with a university that provides Linux lab machines:
-
-```bash
-# SSH to the lab machine
-ssh yourusername@lab-machine.university.edu
-
-# Navigate to your project directory
-cd /path/to/A3
-
-# Compile and run
-make
-./sys_stats
-```
-
-### Option 4: Virtual Machine
-
-Use VirtualBox or VMware with Ubuntu:
-
-1. Download Ubuntu ISO from [ubuntu.com](https://ubuntu.com/download/desktop)
-2. Create a new VM with at least 2GB RAM
-3. Install Ubuntu
-4. Transfer project files (via shared folder or git)
-5. Compile and run
+### Other Options
+- **SSH to Linux server**: Compile and run on remote Linux machine
+- **Virtual Machine**: Run Ubuntu in VirtualBox/VMware and compile there
 
 ## 📖 Command Line Arguments
 
@@ -470,17 +410,12 @@ This project demonstrates proficiency in:
 - [Linux Kernel Documentation - /proc/stat](https://www.kernel.org/doc/html/latest/filesystems/proc.html)
 - [Advanced Programming in the UNIX Environment by W. Richard Stevens](https://www.apuebook.com/)
 
-## 👨‍💻 Author
+## � About This Project
 
-**Zuhair Khan**  
-Student ID: 1008882933  
-Course: CSCB09 - Software Tools and Systems Programming  
-University of Toronto Scarborough
-
-## 📄 License
-
-This project was completed as coursework. Feel free to use as reference for learning purposes, but please don't submit as your own work.
-
----
+Developed by **Zuhair Khan** as part of systems programming coursework at University of Toronto Scarborough. This project demonstrates proficiency in low-level C programming, operating system concepts, and concurrent process management.
 
 **For Recruiters**: This project showcases systems-level programming skills including process management, IPC, signal handling, and working with Linux kernel interfaces. The concurrent architecture demonstrates understanding of operating system concepts and ability to write production-quality C code with proper error handling and documentation.
+
+### Academic Integrity Notice
+
+This code is publicly available for educational and portfolio purposes. If you're a student, please use it as a reference to understand concepts, but **do not copy or submit this work as your own**. Academic integrity violations have serious consequences. Write your own implementation and learn from the process.
