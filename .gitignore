@@ -1,0 +1,44 @@
+# Compiled executables
+sys_stats
+mySystemStats
+
+# Object files
+*.o
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.out
+*.exe
+*.app
+
+# Archive files
+*.zip
+*.tar
+*.gz
+*.tar.gz
+
+# Assignment submission folders and reports
+Zuhair_Khan_*
+*_A1_cscb09/
+*_report.pdf
+*.pdf
+
+# Core dumps
+core
+core.*
