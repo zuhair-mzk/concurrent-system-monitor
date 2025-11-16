@@ -2,6 +2,8 @@
 
 A real-time, multi-process system monitoring tool that reports CPU usage, memory utilization, user sessions, and system information on Linux systems. This project demonstrates advanced systems programming concepts including concurrent programming, inter-process communication (IPC) via pipes, and signal handling.
 
+> **Note:** This project was developed as the final assignment for CSCB09 (Winter 2024) at the University of Toronto Scarborough.
+
 ## 🎯 Overview
 
 This system monitoring tool efficiently collects and displays vital system statistics through a concurrent architecture. By spawning separate child processes for each metric type (memory, CPU, users), the program achieves non-blocking, simultaneous data collection while maintaining clean output ordering through careful synchronization.
@@ -410,12 +412,5 @@ This project demonstrates proficiency in:
 - [Linux Kernel Documentation - /proc/stat](https://www.kernel.org/doc/html/latest/filesystems/proc.html)
 - [Advanced Programming in the UNIX Environment by W. Richard Stevens](https://www.apuebook.com/)
 
-## � About This Project
-
-Developed by **Zuhair Khan** as part of systems programming coursework at University of Toronto Scarborough. This project demonstrates proficiency in low-level C programming, operating system concepts, and concurrent process management.
-
-**For Recruiters**: This project showcases systems-level programming skills including process management, IPC, signal handling, and working with Linux kernel interfaces. The concurrent architecture demonstrates understanding of operating system concepts and ability to write production-quality C code with proper error handling and documentation.
-
-### Academic Integrity Notice
-
-This code is publicly available for educational and portfolio purposes. If you're a student, please use it as a reference to understand concepts, but **do not copy or submit this work as your own**. Academic integrity violations have serious consequences. Write your own implementation and learn from the process.
+- [Linux Kernel Documentation - /proc/stat](https://www.kernel.org/doc/html/latest/filesystems/proc.html)
+- [Advanced Programming in the UNIX Environment by W. Richard Stevens](https://www.apuebook.com/)
